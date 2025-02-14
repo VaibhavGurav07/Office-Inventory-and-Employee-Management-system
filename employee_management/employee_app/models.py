@@ -18,6 +18,7 @@ class Employee(models.Model):
     last_name = models.CharField(max_length=100)
     dept = models.ForeignKey(Department,on_delete = models.CASCADE)
     salary = models.IntegerField(default= 0)
+    email = models.EmailField(max_length=100,null=True)
     role = models.ForeignKey(Role, on_delete=models.CASCADE)
     phone = models.IntegerField(default=0)
     hire_date = models.DateField()
